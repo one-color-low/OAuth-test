@@ -8,12 +8,6 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="248112257157-v2lvp95l780qmdb63t7ojial3p4up3nr.apps.googleusercontent.com">
 
-</head>
-
-<body>
-
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
@@ -23,6 +17,12 @@
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         }
     </script>
+
+</head>
+
+<body>
+
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 </body>
 
