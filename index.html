@@ -12,13 +12,6 @@
 
 <body>
 
-    <form id="register_form">
-        <p> ユーザー名を入力してください </p>
-        <input type="file" name="zip_input" />
-    </form>
-
-    <button id="register_btn">登録</button>
-
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <script>
@@ -30,7 +23,6 @@
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         }
     </script>
-
 
 </body>
 
