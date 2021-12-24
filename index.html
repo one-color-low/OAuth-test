@@ -4,6 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>register page</title>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+
+        client_id = "248112257157-v2lvp95l780qmdb63t7ojial3p4up3nr.apps.googleusercontent.com"
+        client_secret = "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"
+
+    </script>
+
 </head>
 
 <body>
@@ -15,9 +25,20 @@
 
     <button id="register_btn">登録</button>
 
-    <script>
+    <meta name="google-signin-client_id" content=client_id>
 
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
     </script>
+
 
 </body>
 
